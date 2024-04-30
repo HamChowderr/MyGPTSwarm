@@ -8,7 +8,7 @@ Each Agent is meticulously customized to excel at specific tasks, allowing conve
 
 The true power of GPT-to-GPT lies in the synergistic collaboration between these Agents, combining their unique capabilities to tackle multifaceted challenges and automate complex workflows. This open-source project serves as an insightful example for developers, researchers, and AI enthusiasts, inviting them to explore the practical applications of generative AI models like GPT and contribute to the community's collective knowledge."
 
-###What Is Different In This Project?
+### What Is Different In This Project?
 Instead of focusing on a Boss that manages developers: - DevJr: A nervous, passive, and shy developer who is afraid of getting fired, so it provides littel to no help. - DevInt: A competent dev, who has to pick up the slack for all the devs. It is very knowledgable and talented, - DevSr: A self-proclaimed 10X engineer, who loud and over confident. It makes many mistakes as it works fast and likes to poke fun at the other devs. Instead I created a Boss that creates and manages any type of agent based on the users input/request/scenerio. 
 
 ### Your Typical GPT-to-GPT
