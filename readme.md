@@ -1,27 +1,23 @@
-# GTP-to-GTP
+# GPTAgents-to-GPTAgents
 
 ## Description
 
-This project is part of the [Syntax Sunday series](https://blog.bloodlinealpha.com/) in which I showcase different software/technology through simple and fun examples. GPT-to-GPT utilizes the OpenAI Chat Completions API, as well as, custom GPTS's using Actions. The idea is to create many Agents or LLM Agents (using either the API or custom GPTs) that work together to solve problems and complete tasks.
+GPTAgents-to-GPTAgents is a contribution and use case to the Syntax Sunday series [Syntax Sunday series](https://blog.bloodlinealpha.com/), which showcases various software and technologies through engaging examples. This project focuses on a novel approach called the GPT-to-GPT method, which utilizes the OpenAI Chat Completions API, as well as, custom GPTS's using Actions. The idea is to create many Agents or LLM Agents (using either the API or custom GPTs) that work together to solve problems and complete tasks.
 
-Currently, OpenAI does not let custom GPT's recruit other custom GPT's to work together, but I am sure they will be adding that at some point. This can be done soley with the API as well, you would just need to create a **Boss**, that decides which Agent or Agents to recruit. It is a very neat concept as after the user submits there prompt, the dialogue is between the Agents and they decide together how to proceed. 
+Each Agent is meticulously customized to excel at specific tasks, allowing conversations to be enhanced with detailed and highly specialized responses. While the project utilizes OpenAI's models to demonstrate the GPT-to-GPT method, developers can also explore creating Agents using other cutting-edge LLM models such as Claude (Anthropic), Gemini (Google), or open-source alternatives.
 
-As well, you could create Agents using other API's (Claude, Gemini, Opensource, custom, etc...) and combine them so they all work in unison, as some models may be cheaper or work better for certain tasks. So you are not limited to using the OpenAI API, you can use which ever works best for you!
+The true power of GPT-to-GPT lies in the synergistic collaboration between these Agents, combining their unique capabilities to tackle multifaceted challenges and automate complex workflows. This open-source project serves as an insightful example for developers, researchers, and AI enthusiasts, inviting them to explore the practical applications of generative AI models like GPT and contribute to the community's collective knowledge."
 
-### Agents
-For this example I created three "Agents" which are powered by the OpenAI API:
-- DevJr: A nervous, passive, and shy developer who is afraid of getting fired, so it provides littel to no help.
-- DevInt: A competent dev, who has to pick up the slack for all the devs. It is very knowledgable and talented.
-- DevSr: A self-proclaimed 10X engineer, who loud and over confident. It makes many mistakes as it works fast and likes to poke fun at the other devs.
+###What Is Different In This Project?
+Instead of focusing on a Boss that manages developers: - DevJr: A nervous, passive, and shy developer who is afraid of getting fired, so it provides littel to no help. - DevInt: A competent dev, who has to pick up the slack for all the devs. It is very knowledgable and talented, - DevSr: A self-proclaimed 10X engineer, who loud and over confident. It makes many mistakes as it works fast and likes to poke fun at the other devs. Instead I created a Boss that creates and manages any type of agent based on the users input/request/scenerio. 
 
-### Your Typical Dev Shop
-Within chatGPT I created a custom GPT called `Your Typical Dev Shop` which acts as the **Boss** and manages the three Agents. Through the use of GPT Actions, the **Boss** is able to forward requests from the chat interface to the appropriate dev and decide if the response is satisfactory or not. The **Boss** can then use this information to craft a response or ask another question via Actions. 
+### Your Typical GPT-to-GPT
+Within chatGPT I created a custom GPT called `Your Typical Dev Shop` which acts as the **Boss** that create and manages the three Agents. Through the use of GPT Actions, the **Boss** is able to forward requests from the chat interface to the appropriate dev and decide if the response is satisfactory or not. The **Boss** can then use this information to craft a response or ask another question via Actions. 
 
 ### How it Works
 Essentially we have GPT-to-GPT dialogue in which the **Boss** will forward the users question or prompt to the Agents (OpenAI API) using Actions. The **Boss** will receive the repsonse via the API and decide what to do next. This example simplifies it has the **Boss** really only has two options: ask another question/clarification from the API or relay the response in its own words back to the user.
 
-## Other Use Cases
-While this example is fun and simple, it clearly shows that you can use teams of Agents to work together to solve problems and complete tasks in user-focused scenarios. Some other examples could be:
+## Example Of Agents (Provided by @bloodlinealpha)
 
 ### Personalized Writing Assistant
 A setup where multiple GPT agents assist a user in creating complex documents such as research papers, novels, or business plans. Each agent contributes different expertise—research, drafting, and editing.
@@ -53,24 +49,57 @@ Agents are deployed to handle a tiered customer support system where they intera
 - For complex issues, Agent 3 engages with advanced troubleshooting or escalates to human support if needed.
 The Boss oversees the conversation flow, ensuring customer satisfaction at each step.
 
-These examples demonstrate the versatility of multi-agent interactions, providing user-focused solutions that enhance engagement and deliver tailored support in various contexts.
+## Example Of Agents (Provided by @tylan)
 
+1. **LegalEagle Personas:**
+   - **LegalEagleJr:** New to the legal field, eager but less experienced. Handles straightforward legal queries.
+   - **LegalEagleInt:** Competent with a good handle on most legal matters, can manage moderately complex issues.
+   - **LegalEagleSr:** Highly experienced and specialized in complicated legal strategies and negotiations.
+
+**Example Use Case:**
+- **User Request:** "I need advice on how to handle a breach of contract."
+- **Boss Action:** Depending on the complexity, the Boss might start with LegalEagleInt for an initial assessment and escalate to LegalEagleSr if the issue is very complex. LegalEagleJr might summarize basic legal principles involved.
+- **Interaction:** LegalEagleInt explains potential legal actions and consequences; LegalEagleSr provides deep strategic advice. LegalEagleJr might contribute by preparing a simple draft for the user's understanding.
+- **Boss Comment:** Adds humor by joking about LegalEagleJr's eagerness to jump into complex legal battles.
+
+2. **Marketeer Personas:**
+   - **MarketeerJr:** Handles basic market analysis and simple campaign ideas.
+   - **MarketeerInt:** Well-versed in diverse marketing strategies and can tackle more sophisticated campaigns.
+   - **MarketeerSr:** Expert in cutting-edge marketing trends and complex consumer engagement strategies.
+
+**Example Use Case:**
+- **User Request:** "I need to develop a new marketing strategy for a product launch."
+- **Boss Action:** Assigns MarketeerInt to develop the strategy and MarketeerSr to review and add innovative elements. MarketeerJr might gather initial consumer insights.
+- **Interaction:** Each persona contributes at different stages, with the Boss moderating and ensuring the strategy is cohesive and comprehensive.
+- **Boss Comment:** Might quip about MarketeerJr's enthusiasm for viral trends, adding levity.
+
+3. **TechWhiz Personas:**
+   - **TechWhizJr:** Deals with basic tech support and straightforward IT issues.
+   - **TechWhizInt:** Handles system integrations, software troubleshooting, and intermediate technical advice.
+   - **TechWhizSr:** Expert in high-level IT strategy, cybersecurity, and advanced technology solutions.
+
+**Example Use Case:**
+- **User Request:** "We're experiencing frequent system outages; I need a robust IT solution."
+- **Boss Action:** Directs TechWhizInt to diagnose the issue and TechWhizSr to propose advanced solutions if necessary. TechWhizJr might assist by compiling user reports and symptoms.
+- **Interaction:** Collaborative problem-solving with each TechWhiz contributing based on their expertise level.
+- **Boss Comment:** Lightly teases TechWhizJr for suggesting a reboot as a fix for every problem, enhancing user engagement with humor.
+
+These examples demonstrate the versatility of multi-agent interactions, providing user-focused solutions that enhance engagement and deliver tailored support in various contexts.
 
 ## Setup
 ### Install the Repo
-To get started with the GPT_to_GPT project, follow these steps:
+To get started with the GPTAgent_to_GPTAgent project, follow these steps:
 
 1. Clone the repository to your local machine:
 
     ```bash
-    git clone https://github.com/bloodlinealpha/GPT_to_GPT
+    git clone https://github.com/HamChowderr/GPTAgents-to-GPTAgents
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd GPT_to_GPT
-    ```
+    cd GPTAgents-to-GPTAgents
 
 3. Install the project dependencies using npm:
 
@@ -95,7 +124,7 @@ To get started with the GPT_to_GPT project, follow these steps:
 ### Create the Custom GPT
 ****You must have access to the paid (Plus or Team) version of ChatGPT**
 
-7. Create a custom GPT with Actions using the [YourTypicalDevShop.md](YourTypicalDevShop/YourTypicalDevShop.md) configuration.
+7. Create a custom GPT with Actions using the [GPTAgents-to-GPTAgents.md](GPTAgents-to-GPTAgents.md) configuration.
 
     - ensure you replace the server URL in the Actions YAML with your own once your LocalTunnel is running in the next steps. It is a bit of a pain but it is the only way I could get it working without actually working without hosting/publishing the API.
 
@@ -124,4 +153,3 @@ To get started with the GPT_to_GPT project, follow these steps:
 11. Copy the URL and paste it in the Actions YAML -> Servers -> URL, replacing `https://brave-ties-punch.loca.lt`, but ensuring you keep the `/agents` after your URL. Save the changes by clicking the `Update` button in the top right.
 
 12. You can now interact with the Agents using the custom GPT. Click `View GPT` to begin playing!
-
