@@ -24,7 +24,7 @@ router.post('/personaInt', async (req, res) => {
 });
 
 // Path: Agents/routes/personaSr.js
-router.post('/devSr', async (req, res) => {
+router.post('/personaSr', async (req, res) => {
     const input = req.body.input;
     const response = await personaSr(input);
     res.json({ response });
