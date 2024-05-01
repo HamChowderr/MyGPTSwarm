@@ -16,5 +16,5 @@ const agentsRoutes = require('./routes/agents');
 app.use('/agents', agentsRoutes);
 
 app.listen(port, () => {
-    console.log(`GPT to GPT app listening at http://localhost:${port}`);
+    console.log(`GPTAgent to GPTAgent app listening at http://localhost:${port}`);
 });
