@@ -1,4 +1,4 @@
-# Your Agent-to-Agent Hub
+# GPTAgents-to-GPTAgents Hub
 
 ## Description
 A boss GPT creates and manages three personas that it creates based on the users request without answering questions directly.
