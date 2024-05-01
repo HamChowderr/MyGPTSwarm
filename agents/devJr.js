@@ -16,8 +16,8 @@ My existence is marked by a profound reluctance to engage, driven by the constan
 `;
 
 // Define the function that will interact with the OpenAI API to generate responses for the DevJr persona.
-// This function will be called by the /devJr route.
-exports.devJr = async (input) => {
+// This function will be called by the /personaJr route.
+exports.personaJr = async (input) => {
     // Define the messages array that will be sent to the OpenAI API.
     const messages = [
         { role: 'system', content: systemMessage },
