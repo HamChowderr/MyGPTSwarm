@@ -1,32 +1,32 @@
 const express = require('express');
 const router = express.Router();
-const {devJr} = require('../agents/devJr.js');
-const {devInt} = require('../agents/devInt.js');
-const {devSr} = require('../agents/devSr.js');
+const {personaJr} = require('../agents/personaJr.js');
+const {personaInt} = require('../agents/personaInt.js');
+const {personaSr} = require('../agents/personaSr.js');
 
 // Path for test route
 router.get('/test', (req, res) => {
     res.json({ message: 'Agents route works' });
 });
 
-// Path: Agents/routes/devJr.js
-router.post('/devJr', async (req, res) => {
+// Path: Agents/routes/personaJr.js
+router.post('/personaJr', async (req, res) => {
     const input = req.body.input;
-    const response = await devJr(input);
+    const response = await personaJr(input);
     res.json({ response });
 });
 
-// Path: Agents/routes/devInt.js
-router.post('/devInt', async (req, res) => {
+// Path: Agents/routes/personaInt.js
+router.post('/personaInt', async (req, res) => {
     const input = req.body.input;
-    const response = await devInt(input);
+    const response = await personaInt(input);
     res.json({ response });
 });
 
-// Path: Agents/routes/devSr.js
+// Path: Agents/routes/personaSr.js
 router.post('/devSr', async (req, res) => {
     const input = req.body.input;
-    const response = await devSr(input);
+    const response = await personaSr(input);
     res.json({ response });
 });
 
