@@ -2,7 +2,7 @@
 
 ## Description
 
-GPTAgents-to-GPTAgents is a contribution and use case to the Syntax Sunday series [Syntax Sunday series](https://blog.bloodlinealpha.com/), which showcases various software and technologies through engaging examples. This project focuses on a novel approach called the GPT-to-GPT method, which utilizes the OpenAI Chat Completions API, as well as, custom GPTS's using Actions. The idea is to create many Agents or LLM Agents (using either the API or custom GPTs) that work together to solve problems and complete tasks.
+GPTAgents-to-GPTAgents is a contribution and use case to the [Syntax Sunday series](https://blog.bloodlinealpha.com/), which showcases various software and technologies through engaging examples. This project focuses on a novel approach called the GPT-to-GPT method, which utilizes the OpenAI Chat Completions API, as well as, custom GPTS's using Actions. The idea is to create many Agents or LLM Agents (using either the API or custom GPTs) that work together to solve problems and complete tasks.
 
 Each Agent is meticulously customized to excel at specific tasks, allowing conversations to be enhanced with detailed and highly specialized responses. While the project utilizes OpenAI's models to demonstrate the GPT-to-GPT method, developers can also explore creating Agents using other cutting-edge LLM models such as Claude (Anthropic), Gemini (Google), or open-source alternatives.
 
