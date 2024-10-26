@@ -11,7 +11,7 @@ exports.openaiRequest = async (messages) => {
     if(api_key === null) return null;
     
     const options = {
-        model: "gpt-3.5-turbo-0125",
+        model: "gpt-4o",
         messages: messages,
         frequency_penalty: 0.5,
         presence_penalty: 0.5,
