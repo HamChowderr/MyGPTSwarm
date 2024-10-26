@@ -1,21 +1,26 @@
-# GPTAgents-to-GPTAgents
+# MySwarmGPT
 
 ## Description
 
-GPTAgents-to-GPTAgents is a contribution and use case to the [Syntax Sunday series](https://blog.bloodlinealpha.com/), which showcases various software and technologies through engaging examples. This project focuses on a novel approach called the GPT-to-GPT method, which utilizes the OpenAI Chat Completions API, and Actions. The idea is to create many Agents or LLM Agents (using either the API or custom GPTs) that work together to solve problems and complete tasks.
+MySwarmGPT is a contribution and use case to the [Syntax Sunday series](https://blog.bloodlinealpha.com/), which showcases various software and technologies through engaging examples. This project focuses on a novel approach called the GPT-to-GPT method, which utilizes the OpenAI Chat Completions API, and Actions. The idea is to create many Agents or LLM Agents (using either the API or custom GPTs) that work together to solve problems and complete tasks.
 
 Each Agent is meticulously customized to excel at specific tasks, allowing conversations to be enhanced with detailed and highly specialized responses. While the project utilizes OpenAI's models to demonstrate the GPT-to-GPT method, developers can also explore creating Agents using other cutting-edge LLM models such as Claude (Anthropic), Gemini (Google), or open-source alternatives.
 
-The true power of GPT-to-GPT lies in the synergistic collaboration between these Agents, combining their unique capabilities to tackle multifaceted challenges and automate complex workflows. This open-source project serves as an insightful example for developers, researchers, and AI enthusiasts, inviting them to explore the practical applications of generative AI models like GPT and contribute to the community's collective knowledge."
+The true power of GPT-to-GPT lies in the synergistic collaboration between these Agents, combining their unique capabilities to tackle multifaceted challenges and automate complex workflows. This open-source project serves as an insightful example for developers, researchers, and AI enthusiasts, inviting them to explore the practical applications of generative AI models like GPT and contribute to the community's collective knowledge.
 
 ### What Is Different In This Project?
-Instead of focusing on a Boss that manages developers: - DevJr: A nervous, passive, and shy developer who is afraid of getting fired, so it provides littel to no help. - DevInt: A competent dev, who has to pick up the slack for all the devs. It is very knowledgable and talented, - DevSr: A self-proclaimed 10X engineer, who loud and over confident. It makes many mistakes as it works fast and likes to poke fun at the other devs. Instead I created a Boss that creates and manages any type of agent based on the users input/request/scenerio. 
+Instead of focusing on a Boss that manages developers:
+- DevJr: A nervous, passive, and shy developer who is afraid of getting fired, so it provides little to no help.
+- DevInt: A competent dev, who has to pick up the slack for all the devs. It is very knowledgeable and talented.
+- DevSr: A self-proclaimed 10X engineer who is loud and overconfident. It makes many mistakes as it works fast and likes to poke fun at the other devs.
+
+Instead, I created a Boss that creates and manages any type of agent based on the user's input/request/scenario.
 
 ### Your Typical GPT-to-GPT
-Within chatGPT I created a custom GPT called `Your Typical Dev Shop` which acts as the **Boss** that create and manages the three Agents. Through the use of GPT Actions, the **Boss** is able to forward requests from the chat interface to the appropriate dev and decide if the response is satisfactory or not. The **Boss** can then use this information to craft a response or ask another question via Actions. 
+Within ChatGPT, I created a custom GPT called `Your Typical Dev Shop` which acts as the **Boss** that creates and manages the three Agents. Through the use of GPT Actions, the **Boss** is able to forward requests from the chat interface to the appropriate dev and decide if the response is satisfactory or not. The **Boss** can then use this information to craft a response or ask another question via Actions.
 
 ### How it Works
-Essentially we have GPT-to-GPT dialogue in which the **Boss** will forward the users question or prompt to the Agents (OpenAI API) using Actions. The **Boss** will receive the repsonse via the API and decide what to do next. This example simplifies it has the **Boss** really only has two options: ask another question/clarification from the API or relay the response in its own words back to the user.
+Essentially, we have GPT-to-GPT dialogue in which the **Boss** forwards the user's question or prompt to the Agents (OpenAI API) using Actions. The **Boss** receives the response via the API and decides what to do next. This example simplifies it, as the **Boss** really only has two options: ask another question/clarification from the API or relay the response in its own words back to the user.
 
 ## Example Of Agents (Provided by @bloodlinealpha)
 
@@ -88,18 +93,19 @@ These examples demonstrate the versatility of multi-agent interactions, providin
 
 ## Setup
 ### Install the Repo
-To get started with the GPTAgent_to_GPTAgent project, follow these steps:
+To get started with the MySwarmGPT project, follow these steps:
 
 1. Clone the repository to your local machine:
 
     ```bash
-    git clone https://github.com/HamChowderr/GPTAgents-to-GPTAgents
+    git clone https://github.com/HamChowderr/MySwarmGPT
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd GPTAgents-to-GPTAgents
+    cd MySwarmGPT
+    ```
 
 3. Install the project dependencies using npm:
 
@@ -122,11 +128,11 @@ To get started with the GPTAgent_to_GPTAgent project, follow these steps:
 7. Save the `.env` file.
 
 ### Create the Custom GPT
-****You must have access to the paid (Plus or Team) version of ChatGPT**
+**You must have access to the paid (Plus or Team) version of ChatGPT**
 
-7. Create a custom GPT with Actions using the [GPTAgents-to-GPTAgents.md](GPTAgents-to-GPTAgents.md) configuration.
+7. Create a custom GPT with Actions using the [MySwarmGPT.md](MySwarmGPT.md) configuration.
 
-    - ensure you replace the server URL in the Actions YAML with your own once your LocalTunnel is running in the next steps. It is a bit of a pain but it is the only way I could get it working without actually working without hosting/publishing the API.
+    - Ensure you replace the server URL in the Actions YAML with your own once your LocalTunnel is running in the next steps. It is a bit of a pain but it is the only way I could get it working without actually working without hosting/publishing the API.
 
 8. You're now ready to run the project! Start the Node.js server using the following command:
 
@@ -142,14 +148,20 @@ To get started with the GPTAgent_to_GPTAgent project, follow these steps:
     npm install -g localtunnel
     ```
 
-10. Start a webserver on some local port (eg http://localhost:3000) and use the command line interface to request a tunnel to your local server:
+10. Start a webserver on some local port (e.g., http://localhost:3000) and use the command line interface to request a tunnel to your local server:
 
     ```bash
     lt --port 3000
     ```
 
-    You will receive a url, for example https://flkajsfljas.loca.lt, that you can share with anyone for as long as your local instance of lt remains active. Any requests will be routed to your local service at the specified port.
+    You will receive a URL,
+
+ for example, https://flkajsfljas.loca.lt, that you can share with anyone for as long as your local instance of lt remains active. Any requests will be routed to your local service at the specified port.
 
 11. Copy the URL and paste it in the Actions YAML -> Servers -> URL, replacing `https://brave-ties-punch.loca.lt`, but ensuring you keep the `/agents` after your URL. Save the changes by clicking the `Update` button in the top right.
 
 12. You can now interact with the Agents using the custom GPT. Click `View GPT` to begin playing!
+
+--- 
+
+Let me know if you need any additional changes!
